@@ -6,16 +6,16 @@ function calc(oper){
     //with the property this and returns the id for the button pressed
     //the if's them compare the id received in the oper for the current
     //operation and performs the task, it can be done in sequence by each
-    if(oper.id == "sum"){
+    if(oper.id == "+"){
         var result = num1 + num2;
     }
-    else if(oper.id == "sui"){
+    else if(oper.id == "-"){
         var result = num1 - num2;
     }
-    else if(oper.id == "multi"){
+    else if(oper.id == "*"){
         var result = num1 * num2;
     }
-    else if(oper.id == "divid"){
+    else if(oper.id == "/"){
         var result = num1 / num2;
     }
     //For parameters such as 'sum', 'sui', 'multi' and 'divid' 
@@ -30,4 +30,12 @@ function calc(oper){
     */
     document.getElementById("result").value = result;
 
+    var newHistory = "<p>" + num1 + " " + oper.id + " " + num2 + " = " + result + "</p>";
+    var history = document.getElementById("history");
+    history.innerHTML = newHistory + history.innerHTML;
+
+    if(history.children.length > 10){
+        history.removeChild(history.childNodes[10]);
+    }
+    //document.getElementById("history").innerHTML += "<div>" + num1 + " " + oper.id + " " + num2 + " = " + result + "</div>";
 }

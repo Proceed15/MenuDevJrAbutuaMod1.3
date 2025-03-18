@@ -10,19 +10,28 @@
 <body>
     <div class="container">
         <div class="calc">
-            <h1>Calculadora</h1>
+            <div class="calc-title">
+                Calculadora
+            </div>
             <object data="calculate_49.svg" type="image/svg+xml"></object>
             <input id="num1" type="number"/>
             <input id="num2" type="number"/>
             <div>
-                <button id="sum" onclick="calc(this);">+</button>
-                <button id="sui" onclick="calc(this);">-</button>
-                <button id="multi" onclick="calc(this);">*</button>
-                <button id="divid" onclick="calc(this);">/</button>
+                <button id="+" onclick="calc(this);">+</button>
+                <button id="-" onclick="calc(this);">-</button>
+                <button id="*" onclick="calc(this);">*</button>
+                <button id="/" onclick="calc(this);">/</button>
             </div>
             <input id="result" type="text" readonly/>
         </div>
         <div class="history">
+            <div class="history-title">
+                <h1>Histórico:</h1>
+            </div>
+            <div class="last-operations">
+                <small>As 10 operações mais recentes:</small>
+                <div id="history"></div>
+            </div>
         </div>
     </div>
 
