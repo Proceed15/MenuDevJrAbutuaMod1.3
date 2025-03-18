@@ -18,7 +18,7 @@ function calc(oper){
     else if(oper.id == "/"){
         var result = num1 / num2;
     }
-    //For parameters such as 'sum', 'sui', 'multi' and 'divid' 
+    //For parameters such as 'sum', 'sui', 'multi' and 'divid' now know as + * - and /
     //in the button use the switch case below
     /*
     switch(op){
